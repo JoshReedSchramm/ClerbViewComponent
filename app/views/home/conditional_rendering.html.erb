@@ -1,0 +1,15 @@
+<div class="border border-red-300">
+  <%= render(HelloClerbComponent.new(title: "Now you see me")) do %>
+    You see this component.
+  <% end %>
+</div>
+
+<br />
+
+<div class="border border-red-300">
+  <%= render(HelloClerbComponent.new) do %>
+    You won't see this because render? fails
+  <% end %>
+</div>
+
+<%= link_to "Back", root_path %>

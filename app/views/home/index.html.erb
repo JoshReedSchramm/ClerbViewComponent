@@ -1,0 +1,31 @@
+<h1>Super Awesome ViewComponent Examples</h1>
+
+<ol>
+  <li><%= link_to "Basic example showing block content and a passed title.", basic_example_path %>
+  <li><%= link_to "Conditional rendering", conditional_rendering_path %>
+  <li><%= link_to "Rendering collections", rendering_collections_path %>
+  <li><%= link_to "Using helpers", using_helpers_path %>
+  <li><%= link_to "Slots", slots_path %></li>
+  <li><%= link_to "Previews", "http://localhost:3000/rails/view_components" %>
+  <li><%= link_to "Usage Example", "https://app.groupize.com/organizations/josh-test-org/events/clerb-viewcomponent" %></li>
+</ol>
+
+<h2 class='mt-10'>Preview</h2>
+<p>For rspec you have to update application.rb to reset the preview path<br />
+There's support for storybook but it wasn't updated to R7 yet so it's not included here.
+</p>
+
+<h2 class='mt-10'>Testing</h2>
+<ul>
+  <li>Tests will render the content of the component and return a Nokogiri node</li>
+  <li>You can use capybara selectors if you include the gem, otherwise you can use Nokogiri selectors</li>
+  <li>You can customize the controller context, "request" params, and "query" params" passed into the mock-rendered component</li>
+</ul>
+
+<h2 class='mt-10'>Stuff I'm Not Covering</h2>
+<ol>
+  <li>Translations - we use the rails global translations but viewcomponent has support for component level translation files.</li>
+  <li>JS / CSS @ component level - We use tailwind for most css and JS is in its own folder structure. You can put both at the component level to keep them together.</li>
+  <li>Inline templates - You can render your template in the rb file instead of html.erb. Sort of like JSX in a React Component</li>
+  <li>Lots of other options w/ slots.</li>
+</ol>

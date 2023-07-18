@@ -1,0 +1,14 @@
+<!-- Slots let you compose multiple pieces into a single component -->
+<!-- You can define each slot as general content (like header below) -->
+<!-- Or you can use another component (like posts) -->
+
+
+<%= render BlogComponent.new do |component| %>
+  <% component.with_header do %>
+    <%= link_to "My blog", root_path %>
+  <% end %>
+
+  <% component.with_posts(@posts) %>
+<% end %>
+
+<%= link_to "Back", root_path %>
